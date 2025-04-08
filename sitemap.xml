@@ -9,26 +9,25 @@
 <url><loc>https://damurka.github.io/cd2030/reference/add_missing_column.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/add_outlier5std_column.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/adjust_service_data.html</loc></url>
-<url><loc>https://damurka.github.io/cd2030/reference/calculate_average_reporting_rate.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_completeness_summary.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_coverage.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_district_completeness_summary.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_district_outlier_summary.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_district_ratios_summary.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_district_reporting_rate.html</loc></url>
-<url><loc>https://damurka.github.io/cd2030/reference/calculate_dropout.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_indicator_coverage.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_indicator_threshold_coverage.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_inequality.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_outliers_summary.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_overall_score.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_ratios_summary.html</loc></url>
+<url><loc>https://damurka.github.io/cd2030/reference/calculate_reporting_rate.html</loc></url>
+<url><loc>https://damurka.github.io/cd2030/reference/calculate_threshold.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/cd2030-configuration.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/cd2030-package.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/clean_error_message.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/compute_indicator_numerator.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/dashboard.html</loc></url>
-<url><loc>https://damurka.github.io/cd2030/reference/district_low_reporting.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/equiplot.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/equiplot_area.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/equiplot_education.html</loc></url>
@@ -44,6 +43,7 @@
 <url><loc>https://damurka.github.io/cd2030/reference/index.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/init_CacheConnection.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/internal_consistency.html</loc></url>
+<url><loc>https://damurka.github.io/cd2030/reference/list_outlier_units.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/load_data.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/load_equity_data.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/load_excel_data.html</loc></url>
@@ -57,8 +57,11 @@
 <url><loc>https://damurka.github.io/cd2030/reference/plot.cd_indicator_coverage.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/plot.cd_inequality.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/plot.cd_mapping.html</loc></url>
+<url><loc>https://damurka.github.io/cd2030/reference/plot.cd_outlier.html</loc></url>
+<url><loc>https://damurka.github.io/cd2030/reference/plot.cd_outlier_list.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/plot.cd_population_metrics.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/plot.cd_ratios_summary.html</loc></url>
+<url><loc>https://damurka.github.io/cd2030/reference/plot.cd_reporting_rate.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/plot_absolute_differences.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/plot_comparison.cd_data.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/plot_line_graph.html</loc></url>
@@ -70,7 +73,6 @@
 <url><loc>https://damurka.github.io/cd2030/reference/save_dhis2_excel.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/save_dhis2_master_data.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/tbl_sum.cd_adjustment_values.html</loc></url>
-<url><loc>https://damurka.github.io/cd2030/reference/tbl_sum.cd_average_reporting_rate.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/tbl_sum.cd_completeness_summary.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/tbl_sum.cd_district_completeness_summary.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/tbl_sum.cd_district_outliers_summary.html</loc></url>
@@ -80,5 +82,6 @@
 <url><loc>https://damurka.github.io/cd2030/reference/tbl_sum.cd_national_denominators.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/tbl_sum.cd_outliers_summary.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/tbl_sum.cd_ratios_summary.html</loc></url>
+<url><loc>https://damurka.github.io/cd2030/reference/tbl_sum.cd_reporting_rate.html</loc></url>
 </urlset>
 
