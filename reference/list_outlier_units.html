@@ -53,8 +53,7 @@ suitable for plotting or time-series review at subnational levels.</p>
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">list_outlier_units</span><span class="op">(</span></span>
 <span>  <span class="va">.data</span>,</span>
-<span>  indicator <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"opv1"</span>, <span class="st">"opv2"</span>, <span class="st">"opv3"</span>, <span class="st">"penta1"</span>, <span class="st">"penta2"</span>, <span class="st">"penta3"</span>, <span class="st">"measles1"</span>,</span>
-<span>    <span class="st">"measles2"</span>, <span class="st">"pcv1"</span>, <span class="st">"pcv2"</span>, <span class="st">"pcv3"</span>, <span class="st">"bcg"</span>, <span class="st">"rota1"</span>, <span class="st">"rota2"</span>, <span class="st">"ipv1"</span>, <span class="st">"ipv2"</span><span class="op">)</span>,</span>
+<span>  <span class="va">indicator</span>,</span>
 <span>  admin_level <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"adminlevel_1"</span>, <span class="st">"district"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -86,8 +85,7 @@ Options are <code>"adminlevel_1"</code> or <code>"district"</code>.</p></dd>
 <li><p>Median (<code>&lt;indicator&gt;_med</code>)</p></li>
 <li><p>MAD (<code>&lt;indicator&gt;_mad</code>)</p></li>
 <li><p>Outlier flag (<code>&lt;indicator&gt;_outlier5std</code>)</p></li>
-</ul><p>This output is compatible with <code><a href="plot.cd_outlier_list.html">plot.cd_outlier_list()</a></code> for diagnostics.</p>
-    </div>
+</ul></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
 
@@ -96,6 +94,18 @@ Options are <code>"adminlevel_1"</code> or <code>"district"</code>.</p></dd>
 <li><p>Flags outliers when values exceed ±5×MAD from the median.</p></li>
 </ul></div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+<span class="r-in"><span>  <span class="co"># Detect monthly outliers in Penta1 at district level</span></span></span>
+<span class="r-in"><span>  <span class="va">outliers</span> <span class="op">&lt;-</span> <span class="fu">list_outlier_units</span><span class="op">(</span><span class="va">cd_data</span>, indicator <span class="op">=</span> <span class="st">"penta1"</span>, admin_level <span class="op">=</span> <span class="st">"district"</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>  <span class="co"># Plot flagged points in a specific region</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">outliers</span>, region <span class="op">=</span> <span class="st">"Nakuru"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 
