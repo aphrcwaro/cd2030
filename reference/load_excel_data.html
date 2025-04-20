@@ -50,7 +50,7 @@ and outputs a tibble of class <code>cd_data</code>.</p>
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">load_excel_data</span><span class="op">(</span></span>
 <span>  <span class="va">path</span>,</span>
-<span>  start_year <span class="op">=</span> <span class="fl">2019</span>,</span>
+<span>  start_year <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  admin_sheet_name <span class="op">=</span> <span class="st">"Admin_data"</span>,</span>
 <span>  population_sheet_name <span class="op">=</span> <span class="st">"Population_data"</span>,</span>
 <span>  reporting_sheet_name <span class="op">=</span> <span class="st">"Reporting_completeness"</span>,</span>
@@ -68,7 +68,7 @@ and outputs a tibble of class <code>cd_data</code>.</p>
 
 <dt id="arg-start-year">start_year<a class="anchor" aria-label="anchor" href="#arg-start-year"></a></dt>
 <dd><p>An integer. The minimum year to filter the data (default is
-2019).</p></dd>
+NULL).</p></dd>
 
 
 <dt id="arg-admin-sheet-name">admin_sheet_name<a class="anchor" aria-label="anchor" href="#arg-admin-sheet-name"></a></dt>

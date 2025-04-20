@@ -59,7 +59,11 @@ from <code>.rds</code> files.</p>
     </div>
     <div class="section level2">
     <h2 id="active-bindings">Active bindings<a class="anchor" aria-label="anchor" href="#active-bindings"></a></h2>
-    <p></p><div class="r6-active-bindings"><dl><dt><code>cache_path</code></dt>
+    <p></p><div class="r6-active-bindings"><dl><dt><code>language</code></dt>
+<dd><p>Get the UI language.</p></dd>
+
+
+<dt><code>cache_path</code></dt>
 <dd><p>Get cache path.</p></dd>
 
 
@@ -105,6 +109,14 @@ from <code>.rds</code> files.</p>
 
 <dt><code>national_estimates</code></dt>
 <dd><p>Gets national estimates.</p></dd>
+
+
+<dt><code>survey_years</code></dt>
+<dd><p>Get survey years.</p></dd>
+
+
+<dt><code>survey_year</code></dt>
+<dd><p>Gets survey year of survey estimates.</p></dd>
 
 
 <dt><code>start_survey_year</code></dt>
@@ -178,6 +190,7 @@ Update a field (with change tracking)</p></dd>
 <li><p><a href="#method-CacheConnection-append_page_note"><code>CacheConnection$append_page_note()</code></a></p></li>
 <li><p><a href="#method-CacheConnection-get_notes"><code>CacheConnection$get_notes()</code></a></p></li>
 <li><p><a href="#method-CacheConnection-reactive"><code>CacheConnection$reactive()</code></a></p></li>
+<li><p><a href="#method-CacheConnection-set_language"><code>CacheConnection$set_language()</code></a></p></li>
 <li><p><a href="#method-CacheConnection-set_cache_path"><code>CacheConnection$set_cache_path()</code></a></p></li>
 <li><p><a href="#method-CacheConnection-set_countdown_data"><code>CacheConnection$set_countdown_data()</code></a></p></li>
 <li><p><a href="#method-CacheConnection-set_adjusted_data"><code>CacheConnection$set_adjusted_data()</code></a></p></li>
@@ -187,6 +200,7 @@ Update a field (with change tracking)</p></dd>
 <li><p><a href="#method-CacheConnection-set_adjusted_flag"><code>CacheConnection$set_adjusted_flag()</code></a></p></li>
 <li><p><a href="#method-CacheConnection-set_survey_estimates"><code>CacheConnection$set_survey_estimates()</code></a></p></li>
 <li><p><a href="#method-CacheConnection-set_national_estimates"><code>CacheConnection$set_national_estimates()</code></a></p></li>
+<li><p><a href="#method-CacheConnection-set_survey_year"><code>CacheConnection$set_survey_year()</code></a></p></li>
 <li><p><a href="#method-CacheConnection-set_start_survey_year"><code>CacheConnection$set_start_survey_year()</code></a></p></li>
 <li><p><a href="#method-CacheConnection-set_denominator"><code>CacheConnection$set_denominator()</code></a></p></li>
 <li><p><a href="#method-CacheConnection-set_selected_admin_level_1"><code>CacheConnection$set_selected_admin_level_1()</code></a></p></li>
@@ -330,15 +344,31 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </div>
 
 
-</div><p></p><hr><a id="method-CacheConnection-set_cache_path"></a><div class="section">
-<h3 id="method-set-cache-path-">Method <code>set_cache_path()</code><a class="anchor" aria-label="anchor" href="#method-set-cache-path-"></a></h3>
-<p>Set cache RDS file path.</p><div class="section">
+</div><p></p><hr><a id="method-CacheConnection-set_language"></a><div class="section">
+<h3 id="method-set-language-">Method <code>set_language()</code><a class="anchor" aria-label="anchor" href="#method-set-language-"></a></h3>
+<p>Set the language.</p><div class="section">
 <h4 id="usage-6">Usage<a class="anchor" aria-label="anchor" href="#usage-6"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_cache_path</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_language</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
 <h4 id="arguments-3">Arguments<a class="anchor" aria-label="anchor" href="#arguments-3"></a></h4>
+<p></p><div class="arguments"><dl><dt><code>value</code></dt>
+<dd><p>A scalar string representing 2 digit string.</p></dd>
+
+
+</dl><p></p></div>
+</div>
+
+</div><p></p><hr><a id="method-CacheConnection-set_cache_path"></a><div class="section">
+<h3 id="method-set-cache-path-">Method <code>set_cache_path()</code><a class="anchor" aria-label="anchor" href="#method-set-cache-path-"></a></h3>
+<p>Set cache RDS file path.</p><div class="section">
+<h4 id="usage-7">Usage<a class="anchor" aria-label="anchor" href="#usage-7"></a></h4>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_cache_path</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+</div>
+
+<div class="section">
+<h4 id="arguments-4">Arguments<a class="anchor" aria-label="anchor" href="#arguments-4"></a></h4>
 <p></p><div class="arguments"><dl><dt><code>value</code></dt>
 <dd><p>New file path.</p></dd>
 
@@ -349,24 +379,8 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </div><p></p><hr><a id="method-CacheConnection-set_countdown_data"></a><div class="section">
 <h3 id="method-set-countdown-data-">Method <code>set_countdown_data()</code><a class="anchor" aria-label="anchor" href="#method-set-countdown-data-"></a></h3>
 <p>Set the countdown data.</p><div class="section">
-<h4 id="usage-7">Usage<a class="anchor" aria-label="anchor" href="#usage-7"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_countdown_data</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
-</div>
-
-<div class="section">
-<h4 id="arguments-4">Arguments<a class="anchor" aria-label="anchor" href="#arguments-4"></a></h4>
-<p></p><div class="arguments"><dl><dt><code>value</code></dt>
-<dd><p>A <code>cd_data</code> object.</p></dd>
-
-
-</dl><p></p></div>
-</div>
-
-</div><p></p><hr><a id="method-CacheConnection-set_adjusted_data"></a><div class="section">
-<h3 id="method-set-adjusted-data-">Method <code>set_adjusted_data()</code><a class="anchor" aria-label="anchor" href="#method-set-adjusted-data-"></a></h3>
-<p>Set adjusted data.</p><div class="section">
 <h4 id="usage-8">Usage<a class="anchor" aria-label="anchor" href="#usage-8"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_adjusted_data</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_countdown_data</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
@@ -378,15 +392,31 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </dl><p></p></div>
 </div>
 
-</div><p></p><hr><a id="method-CacheConnection-set_performance_threshold"></a><div class="section">
-<h3 id="method-set-performance-threshold-">Method <code>set_performance_threshold()</code><a class="anchor" aria-label="anchor" href="#method-set-performance-threshold-"></a></h3>
-<p>Set performance threshold.</p><div class="section">
+</div><p></p><hr><a id="method-CacheConnection-set_adjusted_data"></a><div class="section">
+<h3 id="method-set-adjusted-data-">Method <code>set_adjusted_data()</code><a class="anchor" aria-label="anchor" href="#method-set-adjusted-data-"></a></h3>
+<p>Set adjusted data.</p><div class="section">
 <h4 id="usage-9">Usage<a class="anchor" aria-label="anchor" href="#usage-9"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_performance_threshold</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_adjusted_data</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
 <h4 id="arguments-6">Arguments<a class="anchor" aria-label="anchor" href="#arguments-6"></a></h4>
+<p></p><div class="arguments"><dl><dt><code>value</code></dt>
+<dd><p>A <code>cd_data</code> object.</p></dd>
+
+
+</dl><p></p></div>
+</div>
+
+</div><p></p><hr><a id="method-CacheConnection-set_performance_threshold"></a><div class="section">
+<h3 id="method-set-performance-threshold-">Method <code>set_performance_threshold()</code><a class="anchor" aria-label="anchor" href="#method-set-performance-threshold-"></a></h3>
+<p>Set performance threshold.</p><div class="section">
+<h4 id="usage-10">Usage<a class="anchor" aria-label="anchor" href="#usage-10"></a></h4>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_performance_threshold</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+</div>
+
+<div class="section">
+<h4 id="arguments-7">Arguments<a class="anchor" aria-label="anchor" href="#arguments-7"></a></h4>
 <p></p><div class="arguments"><dl><dt><code>value</code></dt>
 <dd><p>A numeric scalar.</p></dd>
 
@@ -397,12 +427,12 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </div><p></p><hr><a id="method-CacheConnection-set_excluded_years"></a><div class="section">
 <h3 id="method-set-excluded-years-">Method <code>set_excluded_years()</code><a class="anchor" aria-label="anchor" href="#method-set-excluded-years-"></a></h3>
 <p>Set years to exclude.</p><div class="section">
-<h4 id="usage-10">Usage<a class="anchor" aria-label="anchor" href="#usage-10"></a></h4>
+<h4 id="usage-11">Usage<a class="anchor" aria-label="anchor" href="#usage-11"></a></h4>
 <p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_excluded_years</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
-<h4 id="arguments-7">Arguments<a class="anchor" aria-label="anchor" href="#arguments-7"></a></h4>
+<h4 id="arguments-8">Arguments<a class="anchor" aria-label="anchor" href="#arguments-8"></a></h4>
 <p></p><div class="arguments"><dl><dt><code>value</code></dt>
 <dd><p>Numeric vector.</p></dd>
 
@@ -413,12 +443,12 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </div><p></p><hr><a id="method-CacheConnection-set_k_factors"></a><div class="section">
 <h3 id="method-set-k-factors-">Method <code>set_k_factors()</code><a class="anchor" aria-label="anchor" href="#method-set-k-factors-"></a></h3>
 <p>Set K-factors.</p><div class="section">
-<h4 id="usage-11">Usage<a class="anchor" aria-label="anchor" href="#usage-11"></a></h4>
+<h4 id="usage-12">Usage<a class="anchor" aria-label="anchor" href="#usage-12"></a></h4>
 <p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_k_factors</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
-<h4 id="arguments-8">Arguments<a class="anchor" aria-label="anchor" href="#arguments-8"></a></h4>
+<h4 id="arguments-9">Arguments<a class="anchor" aria-label="anchor" href="#arguments-9"></a></h4>
 <p></p><div class="arguments"><dl><dt><code>value</code></dt>
 <dd><p>Named numeric vector.</p></dd>
 
@@ -429,12 +459,12 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </div><p></p><hr><a id="method-CacheConnection-set_adjusted_flag"></a><div class="section">
 <h3 id="method-set-adjusted-flag-">Method <code>set_adjusted_flag()</code><a class="anchor" aria-label="anchor" href="#method-set-adjusted-flag-"></a></h3>
 <p>Set adjusted flag.</p><div class="section">
-<h4 id="usage-12">Usage<a class="anchor" aria-label="anchor" href="#usage-12"></a></h4>
+<h4 id="usage-13">Usage<a class="anchor" aria-label="anchor" href="#usage-13"></a></h4>
 <p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_adjusted_flag</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
-<h4 id="arguments-9">Arguments<a class="anchor" aria-label="anchor" href="#arguments-9"></a></h4>
+<h4 id="arguments-10">Arguments<a class="anchor" aria-label="anchor" href="#arguments-10"></a></h4>
 <p></p><div class="arguments"><dl><dt><code>value</code></dt>
 <dd><p>Logical scalar.</p></dd>
 
@@ -445,12 +475,12 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </div><p></p><hr><a id="method-CacheConnection-set_survey_estimates"></a><div class="section">
 <h3 id="method-set-survey-estimates-">Method <code>set_survey_estimates()</code><a class="anchor" aria-label="anchor" href="#method-set-survey-estimates-"></a></h3>
 <p>Set survey estimates.</p><div class="section">
-<h4 id="usage-13">Usage<a class="anchor" aria-label="anchor" href="#usage-13"></a></h4>
+<h4 id="usage-14">Usage<a class="anchor" aria-label="anchor" href="#usage-14"></a></h4>
 <p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_survey_estimates</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
-<h4 id="arguments-10">Arguments<a class="anchor" aria-label="anchor" href="#arguments-10"></a></h4>
+<h4 id="arguments-11">Arguments<a class="anchor" aria-label="anchor" href="#arguments-11"></a></h4>
 <p></p><div class="arguments"><dl><dt><code>value</code></dt>
 <dd><p>Named numeric vector.</p></dd>
 
@@ -461,14 +491,30 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </div><p></p><hr><a id="method-CacheConnection-set_national_estimates"></a><div class="section">
 <h3 id="method-set-national-estimates-">Method <code>set_national_estimates()</code><a class="anchor" aria-label="anchor" href="#method-set-national-estimates-"></a></h3>
 <p>Set national estimates.</p><div class="section">
-<h4 id="usage-14">Usage<a class="anchor" aria-label="anchor" href="#usage-14"></a></h4>
+<h4 id="usage-15">Usage<a class="anchor" aria-label="anchor" href="#usage-15"></a></h4>
 <p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_national_estimates</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
-<h4 id="arguments-11">Arguments<a class="anchor" aria-label="anchor" href="#arguments-11"></a></h4>
+<h4 id="arguments-12">Arguments<a class="anchor" aria-label="anchor" href="#arguments-12"></a></h4>
 <p></p><div class="arguments"><dl><dt><code>value</code></dt>
 <dd><p>Named list.</p></dd>
+
+
+</dl><p></p></div>
+</div>
+
+</div><p></p><hr><a id="method-CacheConnection-set_survey_year"></a><div class="section">
+<h3 id="method-set-survey-year-">Method <code>set_survey_year()</code><a class="anchor" aria-label="anchor" href="#method-set-survey-year-"></a></h3>
+<p>Set year of survey estimates.</p><div class="section">
+<h4 id="usage-16">Usage<a class="anchor" aria-label="anchor" href="#usage-16"></a></h4>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_survey_year</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+</div>
+
+<div class="section">
+<h4 id="arguments-13">Arguments<a class="anchor" aria-label="anchor" href="#arguments-13"></a></h4>
+<p></p><div class="arguments"><dl><dt><code>value</code></dt>
+<dd><p>Integer year.</p></dd>
 
 
 </dl><p></p></div>
@@ -477,12 +523,12 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </div><p></p><hr><a id="method-CacheConnection-set_start_survey_year"></a><div class="section">
 <h3 id="method-set-start-survey-year-">Method <code>set_start_survey_year()</code><a class="anchor" aria-label="anchor" href="#method-set-start-survey-year-"></a></h3>
 <p>Set start year of surveys.</p><div class="section">
-<h4 id="usage-15">Usage<a class="anchor" aria-label="anchor" href="#usage-15"></a></h4>
+<h4 id="usage-17">Usage<a class="anchor" aria-label="anchor" href="#usage-17"></a></h4>
 <p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_start_survey_year</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
-<h4 id="arguments-12">Arguments<a class="anchor" aria-label="anchor" href="#arguments-12"></a></h4>
+<h4 id="arguments-14">Arguments<a class="anchor" aria-label="anchor" href="#arguments-14"></a></h4>
 <p></p><div class="arguments"><dl><dt><code>value</code></dt>
 <dd><p>Integer year.</p></dd>
 
@@ -493,40 +539,8 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </div><p></p><hr><a id="method-CacheConnection-set_denominator"></a><div class="section">
 <h3 id="method-set-denominator-">Method <code>set_denominator()</code><a class="anchor" aria-label="anchor" href="#method-set-denominator-"></a></h3>
 <p>Set denominator type.</p><div class="section">
-<h4 id="usage-16">Usage<a class="anchor" aria-label="anchor" href="#usage-16"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_denominator</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
-</div>
-
-<div class="section">
-<h4 id="arguments-13">Arguments<a class="anchor" aria-label="anchor" href="#arguments-13"></a></h4>
-<p></p><div class="arguments"><dl><dt><code>value</code></dt>
-<dd><p>Character scalar.</p></dd>
-
-
-</dl><p></p></div>
-</div>
-
-</div><p></p><hr><a id="method-CacheConnection-set_selected_admin_level_1"></a><div class="section">
-<h3 id="method-set-selected-admin-level-">Method <code>set_selected_admin_level_1()</code><a class="anchor" aria-label="anchor" href="#method-set-selected-admin-level-"></a></h3>
-<p>Set selected region.</p><div class="section">
-<h4 id="usage-17">Usage<a class="anchor" aria-label="anchor" href="#usage-17"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_selected_admin_level_1</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
-</div>
-
-<div class="section">
-<h4 id="arguments-14">Arguments<a class="anchor" aria-label="anchor" href="#arguments-14"></a></h4>
-<p></p><div class="arguments"><dl><dt><code>value</code></dt>
-<dd><p>Character scalar.</p></dd>
-
-
-</dl><p></p></div>
-</div>
-
-</div><p></p><hr><a id="method-CacheConnection-set_selected_district"></a><div class="section">
-<h3 id="method-set-selected-district-">Method <code>set_selected_district()</code><a class="anchor" aria-label="anchor" href="#method-set-selected-district-"></a></h3>
-<p>Set selected district.</p><div class="section">
 <h4 id="usage-18">Usage<a class="anchor" aria-label="anchor" href="#usage-18"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_selected_district</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_denominator</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
@@ -538,15 +552,47 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </dl><p></p></div>
 </div>
 
-</div><p></p><hr><a id="method-CacheConnection-set_mapping_years"></a><div class="section">
-<h3 id="method-set-mapping-years-">Method <code>set_mapping_years()</code><a class="anchor" aria-label="anchor" href="#method-set-mapping-years-"></a></h3>
-<p>Set mapping years.</p><div class="section">
+</div><p></p><hr><a id="method-CacheConnection-set_selected_admin_level_1"></a><div class="section">
+<h3 id="method-set-selected-admin-level-">Method <code>set_selected_admin_level_1()</code><a class="anchor" aria-label="anchor" href="#method-set-selected-admin-level-"></a></h3>
+<p>Set selected region.</p><div class="section">
 <h4 id="usage-19">Usage<a class="anchor" aria-label="anchor" href="#usage-19"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_mapping_years</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_selected_admin_level_1</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
 <h4 id="arguments-16">Arguments<a class="anchor" aria-label="anchor" href="#arguments-16"></a></h4>
+<p></p><div class="arguments"><dl><dt><code>value</code></dt>
+<dd><p>Character scalar.</p></dd>
+
+
+</dl><p></p></div>
+</div>
+
+</div><p></p><hr><a id="method-CacheConnection-set_selected_district"></a><div class="section">
+<h3 id="method-set-selected-district-">Method <code>set_selected_district()</code><a class="anchor" aria-label="anchor" href="#method-set-selected-district-"></a></h3>
+<p>Set selected district.</p><div class="section">
+<h4 id="usage-20">Usage<a class="anchor" aria-label="anchor" href="#usage-20"></a></h4>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_selected_district</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+</div>
+
+<div class="section">
+<h4 id="arguments-17">Arguments<a class="anchor" aria-label="anchor" href="#arguments-17"></a></h4>
+<p></p><div class="arguments"><dl><dt><code>value</code></dt>
+<dd><p>Character scalar.</p></dd>
+
+
+</dl><p></p></div>
+</div>
+
+</div><p></p><hr><a id="method-CacheConnection-set_mapping_years"></a><div class="section">
+<h3 id="method-set-mapping-years-">Method <code>set_mapping_years()</code><a class="anchor" aria-label="anchor" href="#method-set-mapping-years-"></a></h3>
+<p>Set mapping years.</p><div class="section">
+<h4 id="usage-21">Usage<a class="anchor" aria-label="anchor" href="#usage-21"></a></h4>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_mapping_years</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+</div>
+
+<div class="section">
+<h4 id="arguments-18">Arguments<a class="anchor" aria-label="anchor" href="#arguments-18"></a></h4>
 <p></p><div class="arguments"><dl><dt><code>value</code></dt>
 <dd><p>Integer vector.</p></dd>
 
@@ -557,40 +603,8 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </div><p></p><hr><a id="method-CacheConnection-set_un_estimates"></a><div class="section">
 <h3 id="method-set-un-estimates-">Method <code>set_un_estimates()</code><a class="anchor" aria-label="anchor" href="#method-set-un-estimates-"></a></h3>
 <p>Set UN estimates.</p><div class="section">
-<h4 id="usage-20">Usage<a class="anchor" aria-label="anchor" href="#usage-20"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_un_estimates</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
-</div>
-
-<div class="section">
-<h4 id="arguments-17">Arguments<a class="anchor" aria-label="anchor" href="#arguments-17"></a></h4>
-<p></p><div class="arguments"><dl><dt><code>value</code></dt>
-<dd><p>Data frame.</p></dd>
-
-
-</dl><p></p></div>
-</div>
-
-</div><p></p><hr><a id="method-CacheConnection-set_wuenic_estimates"></a><div class="section">
-<h3 id="method-set-wuenic-estimates-">Method <code>set_wuenic_estimates()</code><a class="anchor" aria-label="anchor" href="#method-set-wuenic-estimates-"></a></h3>
-<p>Set WUENIC estimates.</p><div class="section">
-<h4 id="usage-21">Usage<a class="anchor" aria-label="anchor" href="#usage-21"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_wuenic_estimates</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
-</div>
-
-<div class="section">
-<h4 id="arguments-18">Arguments<a class="anchor" aria-label="anchor" href="#arguments-18"></a></h4>
-<p></p><div class="arguments"><dl><dt><code>value</code></dt>
-<dd><p>Data frame.</p></dd>
-
-
-</dl><p></p></div>
-</div>
-
-</div><p></p><hr><a id="method-CacheConnection-set_national_survey"></a><div class="section">
-<h3 id="method-set-national-survey-">Method <code>set_national_survey()</code><a class="anchor" aria-label="anchor" href="#method-set-national-survey-"></a></h3>
-<p>Set national survey.</p><div class="section">
 <h4 id="usage-22">Usage<a class="anchor" aria-label="anchor" href="#usage-22"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_national_survey</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_un_estimates</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
@@ -602,11 +616,11 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </dl><p></p></div>
 </div>
 
-</div><p></p><hr><a id="method-CacheConnection-set_regional_survey"></a><div class="section">
-<h3 id="method-set-regional-survey-">Method <code>set_regional_survey()</code><a class="anchor" aria-label="anchor" href="#method-set-regional-survey-"></a></h3>
-<p>Set regional survey.</p><div class="section">
+</div><p></p><hr><a id="method-CacheConnection-set_wuenic_estimates"></a><div class="section">
+<h3 id="method-set-wuenic-estimates-">Method <code>set_wuenic_estimates()</code><a class="anchor" aria-label="anchor" href="#method-set-wuenic-estimates-"></a></h3>
+<p>Set WUENIC estimates.</p><div class="section">
 <h4 id="usage-23">Usage<a class="anchor" aria-label="anchor" href="#usage-23"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_regional_survey</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_wuenic_estimates</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
@@ -618,11 +632,11 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </dl><p></p></div>
 </div>
 
-</div><p></p><hr><a id="method-CacheConnection-set_wiq_survey"></a><div class="section">
-<h3 id="method-set-wiq-survey-">Method <code>set_wiq_survey()</code><a class="anchor" aria-label="anchor" href="#method-set-wiq-survey-"></a></h3>
-<p>Set WIQ survey.</p><div class="section">
+</div><p></p><hr><a id="method-CacheConnection-set_national_survey"></a><div class="section">
+<h3 id="method-set-national-survey-">Method <code>set_national_survey()</code><a class="anchor" aria-label="anchor" href="#method-set-national-survey-"></a></h3>
+<p>Set national survey.</p><div class="section">
 <h4 id="usage-24">Usage<a class="anchor" aria-label="anchor" href="#usage-24"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_wiq_survey</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_national_survey</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
@@ -634,11 +648,11 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </dl><p></p></div>
 </div>
 
-</div><p></p><hr><a id="method-CacheConnection-set_area_survey"></a><div class="section">
-<h3 id="method-set-area-survey-">Method <code>set_area_survey()</code><a class="anchor" aria-label="anchor" href="#method-set-area-survey-"></a></h3>
-<p>Set area-level survey.</p><div class="section">
+</div><p></p><hr><a id="method-CacheConnection-set_regional_survey"></a><div class="section">
+<h3 id="method-set-regional-survey-">Method <code>set_regional_survey()</code><a class="anchor" aria-label="anchor" href="#method-set-regional-survey-"></a></h3>
+<p>Set regional survey.</p><div class="section">
 <h4 id="usage-25">Usage<a class="anchor" aria-label="anchor" href="#usage-25"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_area_survey</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_regional_survey</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
@@ -650,11 +664,11 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </dl><p></p></div>
 </div>
 
-</div><p></p><hr><a id="method-CacheConnection-set_education_survey"></a><div class="section">
-<h3 id="method-set-education-survey-">Method <code>set_education_survey()</code><a class="anchor" aria-label="anchor" href="#method-set-education-survey-"></a></h3>
-<p>Set education-level survey.</p><div class="section">
+</div><p></p><hr><a id="method-CacheConnection-set_wiq_survey"></a><div class="section">
+<h3 id="method-set-wiq-survey-">Method <code>set_wiq_survey()</code><a class="anchor" aria-label="anchor" href="#method-set-wiq-survey-"></a></h3>
+<p>Set WIQ survey.</p><div class="section">
 <h4 id="usage-26">Usage<a class="anchor" aria-label="anchor" href="#usage-26"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_education_survey</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_wiq_survey</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
@@ -666,11 +680,11 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </dl><p></p></div>
 </div>
 
-</div><p></p><hr><a id="method-CacheConnection-set_survey_mapping"></a><div class="section">
-<h3 id="method-set-survey-mapping-">Method <code>set_survey_mapping()</code><a class="anchor" aria-label="anchor" href="#method-set-survey-mapping-"></a></h3>
-<p>Set survey mapping table.</p><div class="section">
+</div><p></p><hr><a id="method-CacheConnection-set_area_survey"></a><div class="section">
+<h3 id="method-set-area-survey-">Method <code>set_area_survey()</code><a class="anchor" aria-label="anchor" href="#method-set-area-survey-"></a></h3>
+<p>Set area-level survey.</p><div class="section">
 <h4 id="usage-27">Usage<a class="anchor" aria-label="anchor" href="#usage-27"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_survey_mapping</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_area_survey</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
@@ -682,11 +696,11 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </dl><p></p></div>
 </div>
 
-</div><p></p><hr><a id="method-CacheConnection-set_map_mapping"></a><div class="section">
-<h3 id="method-set-map-mapping-">Method <code>set_map_mapping()</code><a class="anchor" aria-label="anchor" href="#method-set-map-mapping-"></a></h3>
-<p>Set map overlay mapping.</p><div class="section">
+</div><p></p><hr><a id="method-CacheConnection-set_education_survey"></a><div class="section">
+<h3 id="method-set-education-survey-">Method <code>set_education_survey()</code><a class="anchor" aria-label="anchor" href="#method-set-education-survey-"></a></h3>
+<p>Set education-level survey.</p><div class="section">
 <h4 id="usage-28">Usage<a class="anchor" aria-label="anchor" href="#usage-28"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_map_mapping</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_education_survey</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
@@ -698,15 +712,47 @@ Save data to disk (only if changed and RDS path is not NULL)</p>
 </dl><p></p></div>
 </div>
 
-</div><p></p><hr><a id="method-CacheConnection-clone"></a><div class="section">
-<h3 id="method-clone-">Method <code>clone()</code><a class="anchor" aria-label="anchor" href="#method-clone-"></a></h3>
-<p>The objects of this class are cloneable with this method.</p><div class="section">
+</div><p></p><hr><a id="method-CacheConnection-set_survey_mapping"></a><div class="section">
+<h3 id="method-set-survey-mapping-">Method <code>set_survey_mapping()</code><a class="anchor" aria-label="anchor" href="#method-set-survey-mapping-"></a></h3>
+<p>Set survey mapping table.</p><div class="section">
 <h4 id="usage-29">Usage<a class="anchor" aria-label="anchor" href="#usage-29"></a></h4>
-<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">clone</span><span class="op">(</span>deep <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div><p></p></div>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_survey_mapping</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
 </div>
 
 <div class="section">
 <h4 id="arguments-26">Arguments<a class="anchor" aria-label="anchor" href="#arguments-26"></a></h4>
+<p></p><div class="arguments"><dl><dt><code>value</code></dt>
+<dd><p>Data frame.</p></dd>
+
+
+</dl><p></p></div>
+</div>
+
+</div><p></p><hr><a id="method-CacheConnection-set_map_mapping"></a><div class="section">
+<h3 id="method-set-map-mapping-">Method <code>set_map_mapping()</code><a class="anchor" aria-label="anchor" href="#method-set-map-mapping-"></a></h3>
+<p>Set map overlay mapping.</p><div class="section">
+<h4 id="usage-30">Usage<a class="anchor" aria-label="anchor" href="#usage-30"></a></h4>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">set_map_mapping</span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span></code></pre></div><p></p></div>
+</div>
+
+<div class="section">
+<h4 id="arguments-27">Arguments<a class="anchor" aria-label="anchor" href="#arguments-27"></a></h4>
+<p></p><div class="arguments"><dl><dt><code>value</code></dt>
+<dd><p>Data frame.</p></dd>
+
+
+</dl><p></p></div>
+</div>
+
+</div><p></p><hr><a id="method-CacheConnection-clone"></a><div class="section">
+<h3 id="method-clone-">Method <code>clone()</code><a class="anchor" aria-label="anchor" href="#method-clone-"></a></h3>
+<p>The objects of this class are cloneable with this method.</p><div class="section">
+<h4 id="usage-31">Usage<a class="anchor" aria-label="anchor" href="#usage-31"></a></h4>
+<p></p><div class="r"><div class="sourceCode"><pre><code><span><span class="va">CacheConnection</span><span class="op">$</span><span class="fu">clone</span><span class="op">(</span>deep <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div><p></p></div>
+</div>
+
+<div class="section">
+<h4 id="arguments-28">Arguments<a class="anchor" aria-label="anchor" href="#arguments-28"></a></h4>
 <p></p><div class="arguments"><dl><dt><code>deep</code></dt>
 <dd><p>Whether to make a deep clone.</p></dd>
 

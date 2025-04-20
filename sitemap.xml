@@ -12,6 +12,7 @@
 <url><loc>https://damurka.github.io/cd2030/reference/attr_or_abort.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_completeness_summary.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_coverage.html</loc></url>
+<url><loc>https://damurka.github.io/cd2030/reference/calculate_derived_coverage.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_district_completeness_summary.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_district_outlier_summary.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/calculate_district_ratios_summary.html</loc></url>
@@ -38,6 +39,7 @@
 <url><loc>https://damurka.github.io/cd2030/reference/filter_out_years.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/generate_adjustment_values.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/generate_report.html</loc></url>
+<url><loc>https://damurka.github.io/cd2030/reference/get_admin_columns.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/get_all_indicators.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/get_country_iso3.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/get_country_name.html</loc></url>
@@ -47,6 +49,7 @@
 <url><loc>https://damurka.github.io/cd2030/reference/get_indicator_groups.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/get_mapping_data.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/get_named_indicators.html</loc></url>
+<url><loc>https://damurka.github.io/cd2030/reference/get_population_column.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/index.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/init_CacheConnection.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/internal_consistency.html</loc></url>
@@ -63,6 +66,7 @@
 <url><loc>https://damurka.github.io/cd2030/reference/new_countdown.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/plot.cd_adjustment_values.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/plot.cd_coverage.html</loc></url>
+<url><loc>https://damurka.github.io/cd2030/reference/plot.cd_derived_coverage.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/plot.cd_district_reporting_rate.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/plot.cd_indicator_coverage.html</loc></url>
 <url><loc>https://damurka.github.io/cd2030/reference/plot.cd_inequality.html</loc></url>

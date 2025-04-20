@@ -68,15 +68,15 @@ calculation function containing subnational reporting rate data.</p></dd>
 
 
 <dt id="arg-plot-type">plot_type<a class="anchor" aria-label="anchor" href="#arg-plot-type"></a></dt>
-<dd><p>A character string specifying the plot type. Options:</p><ul><li><p><code>"heat_map"</code>: Creates a tile map of reporting rates across years and units.</p></li>
-<li><p><code>"bar"</code>: Creates bar plots faceted by region/district showing year-wise trends.</p></li>
+<dd><p>A character string specifying the plot type. Options:</p><ul><li><p><code>'heat_map'</code>: Creates a tile map of reporting rates across years and units.</p></li>
+<li><p><code>'bar'</code>: Creates bar plots faceted by region/district showing year-wise trends.</p></li>
 </ul></dd>
 
 
 <dt id="arg-indicator">indicator<a class="anchor" aria-label="anchor" href="#arg-indicator"></a></dt>
-<dd><p>A character. The indicator to visualize. Must be one of:</p><ul><li><p><code>"anc_rr"</code>: Reporting rate for antenatal care visits</p></li>
-<li><p><code>"idelv_rr"</code>: Reporting rate for institutional deliveries</p></li>
-<li><p><code>"vacc_rr"</code>: Reporting rate for vaccination services</p></li>
+<dd><p>A character. The indicator to visualize. Must be one of:</p><ul><li><p><code>'anc_rr'</code>: Reporting rate for antenatal care visits</p></li>
+<li><p><code>'idelv_rr'</code>: Reporting rate for institutional deliveries</p></li>
+<li><p><code>'vacc_rr'</code>: Reporting rate for vaccination services</p></li>
 </ul></dd>
 
 
@@ -95,13 +95,13 @@ calculation function containing subnational reporting rate data.</p></dd>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>The plot adapts based on:</p><ul><li><p><code>plot_type = "heat_map"</code>:</p><ul><li><p>Classifies reporting rates into three bands:</p><ul><li><p>Red: <code>&lt; 70</code></p></li>
+    <p>The plot adapts based on:</p><ul><li><p><code>plot_type = 'heat_map'</code>:</p><ul><li><p>Classifies reporting rates into three bands:</p><ul><li><p>Red: <code>&lt; 70</code></p></li>
 <li><p>Orange: <code>&gt;= 70 &amp; &lt; threshold</code></p></li>
 <li><p>Green: <code>&gt;= threshold</code></p></li>
 </ul></li>
 <li><p>Labels are overlaid on each tile.</p></li>
 </ul></li>
-<li><p><code>plot_type = "bar"</code>:</p><ul><li><p>Displays reporting rates as filled bars, faceted by district or adminlevel_1.</p></li>
+<li><p><code>plot_type = 'bar'</code>:</p><ul><li><p>Displays reporting rates as filled bars, faceted by district or adminlevel_1.</p></li>
 <li><p>Colors are scaled using a gradient from red to green.</p></li>
 </ul></li>
 </ul><p>This function only supports subnational data. National-level objects will trigger an error.</p>
@@ -111,10 +111,10 @@ calculation function containing subnational reporting rate data.</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span>  <span class="co"># Example: Plot heat map of vaccination reporting rates</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cd_reporting_rate_obj</span>, plot_type <span class="op">=</span> <span class="st">"heat_map"</span>, indicator <span class="op">=</span> <span class="st">"vacc_rr"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cd_reporting_rate_obj</span>, plot_type <span class="op">=</span> <span class="st">'heat_map'</span>, indicator <span class="op">=</span> <span class="st">'vacc_rr'</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>  <span class="co"># Example: Plot bar charts for institutional delivery reporting</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cd_reporting_rate_obj</span>, plot_type <span class="op">=</span> <span class="st">"bar"</span>, indicator <span class="op">=</span> <span class="st">"idelv_rr"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cd_reporting_rate_obj</span>, plot_type <span class="op">=</span> <span class="st">'bar'</span>, indicator <span class="op">=</span> <span class="st">'idelv_rr'</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
