@@ -9,7 +9,7 @@ administrative level."></head><body>
 
     <a class="navbar-brand me-2" href="../index.html">cd2030</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.7.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.8</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,7 @@ administrative level."></head><body>
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Retrieve Country Shapefile</h1>
-      <small class="dont-index">Source: <a href="https://github.com/damurka/cd2030/blob/main/R/5_mapping_get_mapping_data.R" class="external-link"><code>R/5_mapping_get_mapping_data.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/damurka/cd2030/blob/v1.0.8/R/5_mapping_get_mapping_data.R" class="external-link"><code>R/5_mapping_get_mapping_data.R</code></a></small>
       <div class="d-none name"><code>get_country_shapefile.Rd</code></div>
     </div>
 
@@ -73,6 +73,7 @@ administrative level.</p>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">shapefile</span> <span class="op">&lt;-</span> <span class="fu">get_country_shapefile</span><span class="op">(</span><span class="st">'KEN'</span>, level <span class="op">=</span> <span class="st">'admin_level_1'</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in st_make_valid(.):</span> could not find function "st_make_valid"</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
